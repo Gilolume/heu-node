@@ -1,0 +1,11 @@
+version: '2'
+services:
+  node-server:
+    image: node:6-slim
+    container_name: node-server
+    ports:
+      - 80:80
+    volumes:
+      - .:/src/
+    working_dir: /src
+    command: npm run start
